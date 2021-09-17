@@ -1,30 +1,28 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, isEven } from './functions.js';
+import { getRandomNum, isPrime } from './functions.js';
 import greeting from './cli.js';
 
-export const playGame = () => {
+const playGame = () => {
   let name;
   for (let i = 0; i <= 3; i += 1) {
     if (i === 0) {
       name = greeting();
-      console.log("Answer 'yes' if the number is even, otherwise answer 'no'.");
+      console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
     if (i === 3) {
       console.log(`Congratulations, ${name}`);
       return;
     }
-    const randomNum = getRandomNum();
-    console.log(`Question: ${randomNum}`);
-    let answer = readlineSync.question('Your answer:');
-    if (answer !== 'no' && answer !== 'yes') {
-      answer = 'no';
-    }
+    const randomNum = getRandomNum(1, 100);
 
-    if (isEven(randomNum) === 'yes' && answer === 'no') {
+    console.log(`Question: ${randomNum}`);
+    const answer = readlineSync.question('Your answer:');
+
+    if (isPrime(randomNum) === true && answer === 'no') {
       console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
       return;
     }
-    if (isEven(randomNum) === 'no' && answer === 'yes') {
+    if (isPrime(randomNum) === false && answer === 'yes') {
       console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
       return;
     }
@@ -32,3 +30,4 @@ export const playGame = () => {
     console.log('Correct!');
   }
 };
+export { playGame };
