@@ -28,4 +28,4 @@ const playGame = () => {
     }
   }
 };
-export { playGame };
+export default playGame;

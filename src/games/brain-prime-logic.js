@@ -30,4 +30,4 @@ const playGame = () => {
     console.log('Correct!');
   }
 };
-export { playGame };
+export default playGame;
