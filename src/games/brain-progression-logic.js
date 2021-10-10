@@ -15,9 +15,9 @@ const playGame = () => {
     }
 
     const progressionLength = 10;
-    const firstElementOfProgression = getRandomNum(1, 20);
+    const firstEl = getRandomNum(1, 20);
     const progressionStep = getRandomNum(1, 10);
-    const progression = makeProgression(firstElementOfProgression, progressionStep, progressionLength);
+    const progression = makeProgression(firstEl, progressionStep, progressionLength);
     const indexOfRemoveElement = getRandomNum(1, 10);
 
     const hiddenElement = progression[indexOfRemoveElement];
