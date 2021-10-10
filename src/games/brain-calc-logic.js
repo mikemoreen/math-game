@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum } from './functions.js';
-import greeting from './cli.js';
+import { getRandomNum } from '../utils.js';
+import greeting from '../cli.js';
 
 const operators = ['+', '-', '*'];
 const operations = {

@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, makeProgression } from './functions.js';
-import greeting from './cli.js';
+import { getRandomNum, makeProgression } from '../utils.js';
+import greeting from '../cli.js';
 
 const playGame = () => {
   let name;

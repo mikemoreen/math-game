@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, isEven } from './functions.js';
-import greeting from './cli.js';
+import { getRandomNum, isEven } from '../utils.js';
+import greeting from '../cli.js';
 
-export const playGame = () => {
+const playGame = () => {
   let name;
   for (let i = 0; i <= 3; i += 1) {
     if (i === 0) {
@@ -10,7 +10,7 @@ export const playGame = () => {
       console.log("Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
     if (i === 3) {
-      console.log(`Congratulations, ${name}`);
+      console.log(`Congratulations, ${name}!`);
       return;
     }
     const randomNum = getRandomNum();
@@ -20,11 +20,11 @@ export const playGame = () => {
       answer = 'no';
     }
 
-    if (isEven(randomNum) === 'yes' && answer === 'no') {
+    if (isEven(randomNum)&& answer === 'no') {
       console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
       return;
     }
-    if (isEven(randomNum) === 'no' && answer === 'yes') {
+    if (!isEven(randomNum)&& answer === 'yes') {
       console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
       return;
     }
@@ -32,3 +32,4 @@ export const playGame = () => {
     console.log('Correct!');
   }
 };
+export { playGame };

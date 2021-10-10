@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { getRandomNum, findGcd } from './functions.js';
-import greeting from './cli.js';
+import { getRandomNum, findGcd } from '../utils.js';
+import greeting from '../cli.js';
 
 const playGame = () => {
   let name;
