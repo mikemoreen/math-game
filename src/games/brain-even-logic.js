@@ -21,11 +21,11 @@ const playGame = () => {
     }
 
     if (isEven(randomNum) === 'yes' && answer === 'no') {
-      console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+      console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.Let's try again, ${name}!`);
       return;
     }
     if (isEven(randomNum) === 'no' && answer === 'yes') {
-      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+      console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.Let's try again, ${name}!`);
       return;
     }
 
