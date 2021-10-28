@@ -32,7 +32,7 @@ const playGame = () => {
 
     if (Number(answer) !== realAnswer) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${realAnswer}.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
