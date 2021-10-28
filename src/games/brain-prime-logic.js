@@ -20,10 +20,12 @@ const playGame = () => {
 
     if (isPrime(randomNum) === true && answer === 'no') {
       console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+      console.log(`Let's try again, ${name}!`);
       return;
     }
     if (isPrime(randomNum) === false && answer === 'yes') {
       console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
