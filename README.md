@@ -4,13 +4,16 @@
 [![linter](https://github.com/mikemoreen/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg?branch=main&event=push)](https://github.com/mikemoreen/frontend-project-lvl1/actions/workflows/linter.yml)
 
 # Setup:
-***
+
 Clone repository:
-[`git clone git://github.com/mikemoreen/frontend-project-lvl1.git`]
+`git clone git://github.com/mikemoreen/frontend-project-lvl1.git`
+
 Install dependencies:
-[`npm ci`]
+`npm ci`
+
 Install games as global package:
-[`npm link`]
+`npm link`
+
 ***
 1. Command:[`brain-even`](https://asciinema.org/a/I3LuDQG6jpHkglRDTdMSR1yxc) - определение четности числа
 
