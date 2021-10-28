@@ -1,18 +1,8 @@
-import readlineSync from 'readline-sync';
 import { getRandomNum, makeProgression } from '../utils.js';
-import greeting from '../cli.js';
 
-const playGame = () => {
-  let name;
-  for (let i = 0; i <= 3; i += 1) {
-    if (i === 0) {
-      name = greeting();
-      console.log('What number is missing in the progression?');
-    }
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return;
-    }
+const task = 'What number is missing in the progression?';
+const game = () => {
+  
 
     const progressionLength = 10;
     const firstEl = getRandomNum(1, 20);
@@ -22,16 +12,9 @@ const playGame = () => {
 
     const hiddenElement = progression[indexOfRemoveElement];
     progression[indexOfRemoveElement] = '..';
-    console.log(`Question: ${progression.join(' ')}`);
-    const answer = readlineSync.question('Your answer:');
-
-    if (Number(answer) === hiddenElement) {
-      console.log('Correct!');
-    } else {
-      console.log(`"${answer} is wrong answer ;(. Correct answer was ${hiddenElement}."`);
-      console.log(`Let's try again, ${name}!`);
-      return;
-    }
-  }
+    const question = `Question: ${progression.join(' ')}`;
+    const realAnswer = hiddenElement .toString();
+    return {question, realAnswer}
+    
 };
-export default playGame;
+export { task, game }
