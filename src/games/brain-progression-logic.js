@@ -10,7 +10,7 @@ const playGame = () => {
       console.log('What number is missing in the progression?');
     }
     if (i === 3) {
-      console.log(`Congratulations, ${name}`);
+      console.log(`Congratulations, ${name}!`);
       return;
     }
 
