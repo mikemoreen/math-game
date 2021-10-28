@@ -5,7 +5,7 @@ const game = () => {
   const num = getRandomNum();
   const question = `Question: ${num}`;
   const realAnswer = isEven(num) ? 'yes' : 'no';
-  return { question, realAnswer};
+  return { question, realAnswer };
 };
 
-export { task, game }
+export { task, game };
