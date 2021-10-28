@@ -10,7 +10,7 @@ const playGame = () => {
       console.log('Find the greatest common divisor of given numbers.');
     }
     if (i === 3) {
-      console.log(`Congratulations, ${name}`);
+      console.log(`Congratulations, ${name}!`);
       return;
     }
     const randomNum1 = getRandomNum(1, 100);
