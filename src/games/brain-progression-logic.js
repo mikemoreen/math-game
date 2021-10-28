@@ -29,6 +29,7 @@ const playGame = () => {
       console.log('Correct!');
     } else {
       console.log(`"${answer} is wrong answer ;(. Correct answer was ${hiddenElement}."`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
