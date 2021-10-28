@@ -17,7 +17,7 @@ const playGame = () => {
       console.log('What is the result of the expression?');
     }
     if (i === 3) {
-      console.log(`Congratulations, ${name}`);
+      console.log(`Congratulations, ${name}!`);
       return;
     }
     const randomNum1 = getRandomNum();
