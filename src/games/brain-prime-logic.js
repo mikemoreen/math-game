@@ -10,7 +10,7 @@ const playGame = () => {
       console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
     if (i === 3) {
-      console.log(`Congratulations, ${name}`);
+      console.log(`Congratulations, ${name}!`);
       return;
     }
     const randomNum = getRandomNum(1, 100);
