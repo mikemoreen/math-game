@@ -9,18 +9,18 @@ Clone repository:
 `git clone git://github.com/mikemoreen/frontend-project-lvl1.git`
 
 Install dependencies:
-`npm ci`
+`make install`
 
 Install games as global package:
 `npm link`
 
 ***
-1. Command:[`brain-even`](https://asciinema.org/a/I3LuDQG6jpHkglRDTdMSR1yxc) - определение четности числа
+1. [`brain-even`](https://asciinema.org/a/I3LuDQG6jpHkglRDTdMSR1yxc) - определение четности числа
 
-2. Command:[`brain-calc `](https://asciinema.org/a/kX6qtFRyMWRsTZMs1e8kDtft5) - расчет математического выражения
+2. [`brain-calc `](https://asciinema.org/a/kX6qtFRyMWRsTZMs1e8kDtft5) - расчет математического выражения
 
-3. Command:[`brain-gcd`](https://asciinema.org/a/sNtxZVlIHlgizYzK8xxZH1sxi) - НОД
+3. [`brain-gcd`](https://asciinema.org/a/sNtxZVlIHlgizYzK8xxZH1sxi) - НОД
 
-4. Command:[`brain-progression`](https://asciinema.org/a/CsgVoiULumHJCTzfm8R0n5Lpo) - поиск пропущенного числа в численной прогрессии
+4. [`brain-progression`](https://asciinema.org/a/CsgVoiULumHJCTzfm8R0n5Lpo) - поиск пропущенного числа в численной прогрессии
 
-5. Command:[`brain-prime`](https://asciinema.org/a/bV0qfHNYUFkpi0wOCccWnciX8) - определение простого числа
+5. [`brain-prime`](https://asciinema.org/a/bV0qfHNYUFkpi0wOCccWnciX8) - определение простого числа

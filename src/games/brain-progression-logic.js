@@ -1,17 +1,24 @@
-import { getRandomNum, makeProgression } from '../utils.js';
+import generateRandomNumber from '../utils.js';
 
-const task = 'What number is missing in the progression?';
-const game = () => {
+const description = 'What number is missing in the progression?';
+const makeProgression = (firstElementOfProgression, progressionStep, progressionLength) => {
+  const progression = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression[i] = firstElementOfProgression + progressionStep * i;
+  }
+  return progression;
+};
+const generateRound = () => {
   const progressionLength = 10;
-  const firstEl = getRandomNum(1, 20);
-  const progressionStep = getRandomNum(1, 10);
+  const firstEl = generateRandomNumber(1, 20);
+  const progressionStep = generateRandomNumber(1, 10);
   const progression = makeProgression(firstEl, progressionStep, progressionLength);
-  const indexOfRemoveElement = getRandomNum(0, 9);
+  const indexOfRemoveElement = generateRandomNumber(0, 9);
 
   const hiddenElement = progression[indexOfRemoveElement];
   progression[indexOfRemoveElement] = '..';
   const question = `Question: ${progression.join(' ')}`;
-  const realAnswer = hiddenElement.toString();
-  return { question, realAnswer };
+  const answer = hiddenElement.toString();
+  return { question, answer };
 };
-export { task, game };
+export { description, generateRound };

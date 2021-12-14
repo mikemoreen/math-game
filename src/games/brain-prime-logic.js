@@ -1,11 +1,19 @@
-import { getRandomNum, isPrime } from '../utils.js';
+import generateRandomNumber from '../utils.js';
 
-const task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-const game = () => {
-  const num = getRandomNum();
+const description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+const isPrime = (num) => {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+};
+const generateRound = () => {
+  const num = generateRandomNumber();
   const question = `Question: ${num}`;
-  const realAnswer = isPrime(num) ? 'yes' : 'no';
-  return { question, realAnswer };
+  const answer = isPrime(num) ? 'yes' : 'no';
+  return { question, answer };
 };
 
-export { task, game };
+export { description, generateRound };

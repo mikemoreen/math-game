@@ -1,26 +1,24 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
-const play = (task, game) => {
-  const name = greeting();
-  console.log(task);
-
-  for (let i = 0; i <= 3; i += 1) {
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return;
-    }
-    const { question, realAnswer } = game();
+const play = (description, generateRound) => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${name}!`);
+  console.log(description);
+  const rounds = 3;
+  for (let i = 0; i <= rounds; i += 1) {
+    const { question, answer } = generateRound();
     console.log(question);
-    const answer = readlineSync.question('Your answer:');
+    const userAnswer = readlineSync.question('Your answer:');
 
-    if (answer !== realAnswer) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${realAnswer}.`);
+    if (answer !== userAnswer) {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${answer}.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
 
     console.log('Correct!');
   }
+  console.log(`Congratulations, ${name}!`);
 };
 export default play;
