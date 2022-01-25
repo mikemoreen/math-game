@@ -19,7 +19,7 @@ const generateRound = () => {
   const randomNum1 = generateRandomNumber(1, 100);
   const randomNum2 = generateRandomNumber(1, 100);
   const answer = findGcd(randomNum1, randomNum2).toString();
-  const question = `Question: ${randomNum1} ${randomNum2}`;
+  const question = `${randomNum1} ${randomNum2}`;
   return { question, answer };
 };
 export { description, generateRound };

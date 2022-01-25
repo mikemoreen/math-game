@@ -10,14 +10,14 @@ const makeProgression = (firstElementOfProgression, progressionStep, progression
 };
 const generateRound = () => {
   const progressionLength = 10;
-  const firstEl = generateRandomNumber(1, 20);
+  const firstElement = generateRandomNumber(1, 20);
   const progressionStep = generateRandomNumber(1, 10);
-  const progression = makeProgression(firstEl, progressionStep, progressionLength);
-  const indexOfRemoveElement = generateRandomNumber(0, 9);
+  const progression = makeProgression(firstElement, progressionStep, progressionLength);
+  const hiddenElementIndex = generateRandomNumber(0, 9);
 
-  const hiddenElement = progression[indexOfRemoveElement];
-  progression[indexOfRemoveElement] = '..';
-  const question = `Question: ${progression.join(' ')}`;
+  const hiddenElement = progression[hiddenElementIndex];
+  progression[hiddenElementIndex] = '..';
+  const question = `${progression.join(' ')}`;
   const answer = hiddenElement.toString();
   return { question, answer };
 };

@@ -8,7 +8,7 @@ const play = (description, generateRound) => {
   const rounds = 3;
   for (let i = 0; i < rounds; i += 1) {
     const { question, answer } = generateRound();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer:');
 
     if (answer !== userAnswer) {

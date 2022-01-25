@@ -16,7 +16,7 @@ const generateRound = () => {
   const operator = operators[index];
   const operation = operations[operator];
 
-  const question = `Question: ${randomNum1} ${operator} ${randomNum2}`;
+  const question = `${randomNum1} ${operator} ${randomNum2}`;
   const answer = operation(randomNum1, randomNum2).toString();
   return { question, answer };
 };
